@@ -1,38 +1,112 @@
+@font-face {
+  font-family: "dreamyFont";
+  src: url('/public/WhisperADream.ttf'), format('truetype'); 
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: url("/public/vivid-blurred-colorful-wallpaper-background.jpg");
+  background-size: cover;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  cursor: url('hand.png'), auto;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes moveWind {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes moveWind2 {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.wind {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 400px;
+  width: 600px;
+  opacity: 60%;
+  z-index: 999;
+  animation: moveWind 26s ease-in-out infinite;
+}
+
+
+.wind2 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 200px;
+  width: 300px;
+  opacity: 40%;
+  z-index: 999;
+  animation: moveWind 19s ease-in-out infinite;
+}
+
+.wind3 {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  height: 200px;
+  width: 300px;
+  opacity: 40%;
+  z-index: 999;
+  animation: moveWind2 19s ease-in-out infinite;
+}
+
+
+
+
+@keyframes rotateText {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
+
+
+.userHint {
+  position: absolute;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  bottom: 21%;
+  font-size: 70px;
+  font-weight: 550;
+  font-family: "dreamyFont";
+  animation: rotateText 5s linear infinite;
+}
+
