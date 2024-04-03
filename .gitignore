@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # Ignore sensitive JSON file
-propane-cubist-401901-370fe595d626.json
+key.json
