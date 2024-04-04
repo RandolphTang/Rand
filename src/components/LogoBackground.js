@@ -57,6 +57,8 @@ export default function LogoBackground() {
                             onMouseUp={handleMouseToggle}
                             onMouseEnter={handleMouseToggle}
                             onMouseLeave={handleMouseToggle}>
+
+            
             
             {showCube && <Cube />}
             

@@ -113,9 +113,10 @@
 
 .dataTracker {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px; /* Add padding to create some space */
+    left: 20px;
+    margin: 0%;
+    padding: 0%; 
     z-index: 999;
-  }
+
+}
 

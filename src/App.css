@@ -101,12 +101,14 @@
 
 
 .userHint {
-  position: absolute;
+  position: fixed;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  bottom: 21%;
+  bottom: 17%;
   font-size: 70px;
   font-weight: 550;
   font-family: "dreamyFont";
   animation: rotateText 5s linear infinite;
 }
+
+
 
