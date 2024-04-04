@@ -1,21 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import countapi from 'countapi-js';
 
 const VisitCountComponent = () => {
   const [visitCount, setVisitCount] = useState(0);
 
   useEffect(() => {
-    countapi.visits('global')
-      .then((result) => {
-        setVisitCount(result.value);
-      })
-      .catch((error) => {
-        console.error('Error fetching visit count:', error);
-      });
-  }, []);
-  console.log(visitCount);
+    const updateVisitCount = async () => {
+      try {
+        const ipAddress = await fetch('https://api.countapi.xyz/getip');
+        const ipData = await ipAddress.json();
+        const response = await fetch(`https://api.countapi.xyz/hit/${ipData.ip}`);
+        const data = await response.json();
+        setVisitCount(data.value);
+      } catch (error) {
+        console.error('Error updating visit count:', error);
+      }
+    };
+
+    updateVisitCount();
+  }, []); // Empty dependency array to run effect only once
+
   return (
-    <p className='dataTracker'>{visitCount} people touched grass</p>
+    
+      <p className='dataTracker'>This page was viewed {visitCount}</p>
+
+      
   );
 };
 
