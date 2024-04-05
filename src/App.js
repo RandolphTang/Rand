@@ -1,7 +1,7 @@
 import './App.css';
 import LogoBackground from './components/LogoBackground';
 import Footer from './components/footer';
-import VisitCountComponent from './components/webCounter';
+
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-       <VisitCountComponent />
+      
       <img src="/cloud.png" alt = "windAnimation" class = "wind" />
       <img src="/cloud.png" alt = "windAnimation2" class = "wind2" />
       <img src="/cloud.png" alt = "windAnimation2" class = "wind3" />
