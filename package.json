@@ -12,13 +12,17 @@
     "axios": "^1.6.8",
     "cors": "^2.8.5",
     "countapi-js": "^1.0.2",
+    "express": "^4.19.2",
     "googleapis": "^105.0.0",
+    "openmeteo": "^1.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga": "^3.3.1",
     "react-ga4": "^2.1.0",
+    "react-icons": "^5.2.1",
     "react-player": "^2.15.1",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
     "three": "^0.163.0",
     "three-obj-loader": "^1.1.3",
     "three-orbitcontrols": "^2.110.3",
@@ -26,9 +30,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "../node_modules/.bin/react-scripts build",
+    "test": "../node_modules/.bin/react-scripts test",
+    "eject": "../node_modules/.bin/react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "typescript": "^4.9.5"
   }
 }

@@ -1,0 +1,106 @@
+body, html {
+    overflow-y: hidden;
+}
+
+.weatherDisplay {
+    background-image: url("../Data/Image/initialBackground.gif");
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.weatherInfo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.city-input {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.submit-button {
+    width: 54px;
+    height: 54px;
+    background: transparent;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background: rgba(255, 255, 255, 0.9); /* Lighter on hover */
+
+}
+
+.submit-button svg {
+    color:grey;
+    width: 24px;
+    height: 24px;
+}
+
+.weatherDataContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 25%;
+    width: 80%;
+}
+
+.weatherDataContainer h1 {
+    font-size: 50px;
+    color: #fff;
+    margin: 0 20px;
+    text-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.weatherDetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    width: 100%;
+    text-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.weatherDetails span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.weatherDetails svg {
+
+    margin-right: 10px;
+
+}

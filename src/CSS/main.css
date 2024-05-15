@@ -1,0 +1,199 @@
+body html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.root {
+    background-image: url('/public/vivid-blurred-colorful-wallpaper-background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.white-logo-background {
+    width: var(--circle-size, 280px); 
+    height: var(--circle-size, 280px);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    transition: width 0.3s, height 0.3s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.white-logo-background.shrink {
+    --circle-size: 200px; 
+
+}
+
+.white-logo-background.gone {
+    opacity: 0;
+    display: none;
+}
+
+.heart {
+    width: calc(10px + 2vmin);
+    height: calc(10px + 2vmin);
+}
+
+
+.oceanPlayer {
+    position:absolute;
+    bottom: 0;
+    margin: 0%;
+    padding: 0%; 
+    left: 20px;
+    right: auto;
+}
+
+.play {
+    transition: transform 0.3s ease-in; 
+    width: 30px; 
+    height: 30px;
+  }
+  
+  .pause {
+    opacity: 80%;
+    width: 30px; 
+    height: 30px;
+    transition: transform 0.5s ease-out; 
+    transform:scale(1.2);
+  }
+
+  .herb {
+    max-width: 100%; 
+    max-height: 100%;
+    width: 57%; 
+    height: 57%;
+    object-fit: contain;
+    user-select: none;
+  }
+
+@keyframes moveWaveX {
+    0% {
+      
+        transform: translateX(30%);
+    }
+    100% {
+   
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes moveWaveY {
+    0% {
+        transform: translateY(-5%);
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(-20%);
+        transform: translateY(-33%);
+    }
+}
+
+.wave {
+    max-width: 250%; 
+    max-height: 300%;
+    height: 300%;
+    width: 250%;
+    z-index: 2;
+    position: absolute;
+    opacity: 85%;
+    transform: translateX(30%);
+    user-select: none;
+    
+}
+
+.wave:hover {
+    animation: moveWaveX ease-in-out 2s infinite alternate;
+}
+
+.white-logo-background.shrink .wave {
+    animation: moveWaveY ease-in-out 3s forwards;
+}
+
+.weatherStuff {
+    z-index: 999;
+    position: absolute;
+    left: 45%;
+    right: 45%;
+}
+
+.usernameContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.username-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-name {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.submit-name svg {
+    width: 30px;
+    height: 30px;
+}
+
+.submit-name:hover {
+   opacity: 60%;
+}
+
+.username-input-transition-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.username-input-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.username-input-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.username-input-transition-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms;
+}
+
+
+

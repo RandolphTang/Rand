@@ -1,0 +1,10 @@
+.footerContent {
+    font-size: 30px;
+    color: white;
+    position:absolute;
+    bottom: 0;
+    margin: 0%;
+    padding: 0%;
+    right: 20px;
+    left: auto;
+}
